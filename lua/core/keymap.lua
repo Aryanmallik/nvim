@@ -38,8 +38,13 @@ map.set("n", "<leader>t", ":NvimTreeToggle<CR>") -- Toggle
 map.set("n", "<leader>d", ":NvimTreeFocus<CR>")  -- Focus on tree when file already open
 map.set("n", "<leader>c", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>e", function()
-	require("oil").open()
-end)
+  require("oil").open()
+end, { desc = "Open Oil file explorer" })
+
+vim.keymap.set("n", ".", function()
+  require("oil.actions").toggle_hidden.callback()
+end, { desc = "Toggle hidden files in Oil" })
+
 --Trouble - Error messages
 map.set("n", "<leader>l", function() require("trouble").toggle() end)
 map.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)

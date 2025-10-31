@@ -48,6 +48,16 @@ return{
                 })
             })
 
+            ls.add_snippets("cpp", {
+                s("incl", {
+                    t({"#include<iostream>","#include<bits/stdc++.h>","using namespace std;"}),
+                    t({"","","int main(){","    "}),
+                    i(0),
+                    t({"","    "}),
+                    t({"return 0;",""}),
+                    t({"}"})
+                })
+            })
 
             ls.add_snippets("rust", {
                 s("rus", {

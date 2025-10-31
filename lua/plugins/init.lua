@@ -1,46 +1,33 @@
-return{ 
-    --Trouble- Error messages
-    'folke/trouble.nvim',
-
-    -- TMUX Nav
-    'christoomey/vim-tmux-navigator',
-
-    -- Comments
-    {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    },
-    
-    -- Auto-close tags
-    {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    },
-
-    -- Gitsigns for tracking git changes
-    {
-        'lewis6991/gitsigns.nvim',
-        config = function() require('gitsigns').setup {} end
-    },
-
-    -- Nvim-Highlight-Colors - show color "overlay"
-    {
-        'brenoprata10/nvim-highlight-colors',
-        config = function()
-            require('nvim-highlight-colors').setup()
-        end
-    },
-    {
-        'dapt4/vim-autoSurround',
-        config = function()
-        end
-    },
-    {
-  'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-},
+return {
+  'folke/trouble.nvim',
+  'christoomey/vim-tmux-navigator',
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  },
+  {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup {}
+    end
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup {}
+    end
+  },
+  {
+    'brenoprata10/nvim-highlight-colors',
+    config = function()
+      require('nvim-highlight-colors').setup()
+    end
+  },
+  {
+    'dapt4/vim-autoSurround',
+    config = function() end
+  },
 }
+
